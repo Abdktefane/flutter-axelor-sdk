@@ -11,7 +11,9 @@
 
 - [Axelor APIs](#axelor-apis)
 
-- [Advance Use](#advance-use)
+- [Advanced Use](#advanced-use)
+
+- [Contributing](#contributing)
 
 ## Get Started
 
@@ -105,12 +107,33 @@ try {
 ## Features
 - **Compatible**: Compatible with all your existing code so you can adopt when and where you want.
 - **Less code**: Do more with less code and avoid entire classes of bugs, so code is simple and easy to maintain.
-- **Highly customizable** : The defaults settings will cover you but if not almost every thing can customize.
+- **Highly customizable** : The defaults settings will cover you but if not almost every thing is customizable.
 - **Architecture-agnostic**: Works with any architecture approach.
+- **enterprise-ready**: All code is fully tested so it's save to use in production.
+- **well documented**: Each feature is well documented.
+
 
 ## Axelor APIs
+#### You can discover all api's features in documentation. Each api is well documented .
+- [x] [Search](https://docs.axelor.com/adk/5.4/dev-guide/web-services/rest.html#find-records)
+- [x] [Advanced Search](https://docs.axelor.com/adk/5.4/dev-guide/web-services/advanced.html#advanced-search)
+- [x] [Fetch](https://docs.axelor.com/adk/5.4/dev-guide/web-services/rest.html#find-records)
+- [x] [Advanced Fetch](https://docs.axelor.com/adk/5.4/dev-guide/web-services/advanced.html#advanced-read)
+- [x] [Delete](https://docs.axelor.com/adk/5.4/dev-guide/web-services/rest.html#update-a-record)
+- [x] [Advanced Delete](https://docs.axelor.com/adk/5.4/dev-guide/web-services/advanced.html#advanced-delete)
+- [x] [Create](https://docs.axelor.com/adk/5.4/dev-guide/web-services/rest.html#create-a-record)
+- [x] [Update](https://docs.axelor.com/adk/5.4/dev-guide/web-services/rest.html#update-a-record)
+- [ ] [Auth Services](https://docs.axelor.com/adk/5.4/dev-guide/web-services/auth.html) ⛏️
+- [ ] [Document Services](https://docs.axelor.com/adk/5.4/dev-guide/web-services/dms.html) ⛏️
+- [ ] [MetaData Services](https://docs.axelor.com/adk/5.4/dev-guide/web-services/meta.html) ⛏️
+- [ ] [Action Service](https://docs.axelor.com/adk/5.4/dev-guide/web-services/advanced.html#action-service) ⛏️
+
 ## Advanced Use
+- **Pagination**:
 - **Token Refresh**:
 - **Log Error**:
 - **Retry logic**:
+
+## Contributing
+You can help us make this project better, feel free to open an new issue or a pull request.
 
