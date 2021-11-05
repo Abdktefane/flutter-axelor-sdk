@@ -62,4 +62,10 @@ extension AxelorStringCriteriaExt on String {
         fieldName: this,
         value: value,
       );
+
+  AxelorCriteria inValues(List<String> values) => AxelorCriteria(
+        axelorOperator: AxelorOperator.inValues,
+        fieldName: this,
+        value: values,
+      );
 }

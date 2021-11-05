@@ -4,7 +4,17 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'axelor_criteria.g.dart';
 
-@JsonSerializable()
+dynamic _valueConverter(dynamic value) {
+  if (value == null) {
+    return null;
+  }
+  if (value is List) {
+    return value;
+  }
+  return value.toString();
+}
+
+@JsonSerializable(explicitToJson: true)
 class AxelorCriteria extends Equatable {
   const AxelorCriteria({
     required this.axelorOperator,
@@ -16,9 +26,17 @@ class AxelorCriteria extends Equatable {
 
   @JsonKey(name: 'operator', toJson: AxelorOperatorExt.asJson)
   final AxelorOperator axelorOperator;
+
+  @JsonKey(includeIfNull: false)
   final String? fieldName;
+
+  @JsonKey(includeIfNull: false)
   final List<AxelorCriteria>? criteria;
-  final String? value;
+
+  @JsonKey(includeIfNull: false, toJson: _valueConverter)
+  final dynamic value;
+
+  @JsonKey(includeIfNull: false)
   final String? value2;
 
   AxelorCriteria copyWith({

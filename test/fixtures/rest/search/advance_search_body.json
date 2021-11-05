@@ -1,0 +1,72 @@
+{
+    "offset": 0,
+    "limit": 8,
+    "fields": [
+        "fullName",
+        "email"
+    ],
+    "sortBy": [
+        "fullName",
+        "-createdOn"
+    ],
+    "related": {
+        "user": [
+            "name",
+            "email"
+        ],
+        "parent": [
+            "fullName"
+        ]
+    },
+    "translate": true,
+    "data": {
+        "_domain": "self.email like :email",
+        "_domainContext": {
+            "email": "%gmail.com"
+        },
+        "_archived": true,
+        "operator": "and",
+        "criteria": [
+            {
+                "fieldName": "email",
+                "operator": "like",
+                "value": "%gmail.com"
+            },
+            {
+                "fieldName": "lang",
+                "operator": "=",
+                "value": "FR"
+            },
+            {
+                "fieldName": "age",
+                "operator": "between",
+                "value": "18",
+                "value2": "40"
+            },
+            {
+                "operator": "or",
+                "criteria": [
+                    {
+                        "fieldName": "firstName",
+                        "operator": "notLike",
+                        "value": "j%"
+                    }
+                ]
+            },
+            {
+                "operator": "not",
+                "criteria": [
+                    {
+                        "fieldName": "age",
+                        "operator": "in",
+                        "value": [
+                            "18",
+                            "21",
+                            "22"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

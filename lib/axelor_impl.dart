@@ -46,7 +46,8 @@ class AxelorImpl extends Axelor {
   String? _getErrorMessage(Map<String, dynamic> response) {
     try {
       return (response['status'] as int == -1) ? response['data']['message'] : response['errors']['error'];
-    } catch (ex) {
+    } catch (ex, st) {
+      logger?.call(ex, st);
       return 'msg_something_wrong';
     }
   }

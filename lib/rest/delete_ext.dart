@@ -16,8 +16,8 @@ extension DeleteExt on AxelorImpl {
   /// [withAuth]: if [true] add token in header
   /// [params]: query params
   /// [headers]: http headers
-  /// [return] array with id of deleted record as only element.
-  Future<AxelorResult<AxelorListModel<AxelorVersionModel>>> delete({
+  /// [return] [AxelorVersionModel] which contain [id] and [version] of deleted record as only element.
+  Future<AxelorResult<AxelorVersionModel>> delete({
     required bool baseDomain,
     required String model,
     required int id,
@@ -41,8 +41,7 @@ extension DeleteExt on AxelorImpl {
       options: options,
     );
 
-    return handleResponse<AxelorListModel<AxelorVersionModel>>(
-        response, AxelorListModel.fromJson(AxelorVersionModel.fromJson));
+    return handleResponse<AxelorVersionModel>(response, AxelorListModel.fromJsonAsSingle(AxelorVersionModel.fromJson));
   }
 
   // Future<AxelorResult<List<int>>> delete({

@@ -75,6 +75,12 @@ abstract class Axelor {
     assert(_instance != null, 'Axelor not initialize yet, please use Axelor.initialize() first');
   }
 
+  static void close() {
+    _checkInitialize();
+    _instance?.client.close(force: true);
+    _instance = null;
+  }
+
   // Rest API'S
 
   /// fetch [model] from axelor backend
@@ -248,8 +254,8 @@ abstract class Axelor {
   /// [withAuth]: if [true] add token in header
   /// [params]: query params
   /// [headers]: http headers
-  /// [return] array with id of deleted record as only element.
-  static Future<AxelorResult<AxelorListModel<AxelorVersionModel>>> delete({
+  /// [return] [AxelorVersionModel] which contain [id] and [version] of deleted record as only element.
+  static Future<AxelorResult<AxelorVersionModel>> delete({
     required bool baseDomain,
     required String model,
     required int id,

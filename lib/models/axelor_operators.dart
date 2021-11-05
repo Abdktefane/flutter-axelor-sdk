@@ -18,6 +18,7 @@ enum AxelorOperator {
   lessThan,
   greaterOrEqualTo,
   lessOrEqualTo,
+  inValues,
 }
 
 extension AxelorOperatorExt on AxelorOperator {
@@ -40,6 +41,9 @@ extension AxelorOperatorExt on AxelorOperator {
     }
     if (this == AxelorOperator.lessOrEqualTo) {
       return '<=';
+    }
+    if (this == AxelorOperator.inValues) {
+      return 'in';
     }
     return describeEnum(this);
   }

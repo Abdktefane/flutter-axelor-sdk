@@ -13,19 +13,28 @@ AxelorCriteria _$AxelorCriteriaFromJson(Map<String, dynamic> json) {
     criteria: (json['criteria'] as List<dynamic>?)
         ?.map((e) => AxelorCriteria.fromJson(e as Map<String, dynamic>))
         .toList(),
-    value: json['value'] as String?,
+    value: json['value'],
     value2: json['value2'] as String?,
   );
 }
 
-Map<String, dynamic> _$AxelorCriteriaToJson(AxelorCriteria instance) =>
-    <String, dynamic>{
-      'operator': AxelorOperatorExt.asJson(instance.axelorOperator),
-      'fieldName': instance.fieldName,
-      'criteria': instance.criteria,
-      'value': instance.value,
-      'value2': instance.value2,
-    };
+Map<String, dynamic> _$AxelorCriteriaToJson(AxelorCriteria instance) {
+  final val = <String, dynamic>{
+    'operator': AxelorOperatorExt.asJson(instance.axelorOperator),
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('fieldName', instance.fieldName);
+  writeNotNull('criteria', instance.criteria?.map((e) => e.toJson()).toList());
+  writeNotNull('value', _valueConverter(instance.value));
+  writeNotNull('value2', instance.value2);
+  return val;
+}
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
@@ -69,4 +78,5 @@ const _$AxelorOperatorEnumMap = {
   AxelorOperator.lessThan: 'lessThan',
   AxelorOperator.greaterOrEqualTo: 'greaterOrEqualTo',
   AxelorOperator.lessOrEqualTo: 'lessOrEqualTo',
+  AxelorOperator.inValues: 'inValues',
 };
