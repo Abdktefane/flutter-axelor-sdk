@@ -1,0 +1,11 @@
+{
+    "status": 0,
+    "data": [
+        {
+            "id": 1,
+            "fullName": "John Smith",
+            "email": "j.smith@gmail.com",
+            "version": 2
+        }
+    ]
+}
