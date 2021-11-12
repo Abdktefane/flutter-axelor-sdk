@@ -23,10 +23,5 @@ jobs:
       - name: Analyze
         run: dart analyze .
 
-      - name: Run Tests
-        run: |
-          pub global activate test_coverage
-          export PATH=$PATH:$HOME/.pub-cache/bin
-          test_coverage
-      - name: Check Code Coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
+      - name: run tests
+        run: flutter pub run test
