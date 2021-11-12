@@ -1,6 +1,5 @@
 import 'package:flutter_axelor_sdk/flutter_axelor_sdk.dart';
 import 'package:flutter_axelor_sdk/models/axelor_version_model.dart';
-import 'package:flutter_axelor_sdk/utils/axelor_body.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../models/user_model.dart';
