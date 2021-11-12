@@ -12,7 +12,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2.3.4
+      
       - uses: dart-lang/setup-dart@v1
+      
+      - name: Flutter action
+        uses: subosito/flutter-action@v1.5.3
 
       - name: Install Dependencies
         run: flutter pub get
