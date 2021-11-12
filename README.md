@@ -1,3 +1,25 @@
+<img src="https://github.com/Abdktefane/flutter-axelor-sdk/blob/8cd7a795772d4bff0705a5dc7dafa2b539915fd0/logo_full.jpg" width="100%" alt="logo" />
+<p align="center">
+  <a href="https://github.com/Abdktefane/flutter-axelor-sdk/actions">
+    <img alt="Build Status" src="https://github.com/Abdktefane/flutter-axelor-sdk/workflows/build/badge.svg">
+  </a>
+  <a href="https://github.com/felangel/equatable/actions">
+    <img alt="Code Coverage" src="https://github.com/Abdktefane/flutter-axelor-sdk/blob/main/coverage_badge.svg">
+  </a>
+  <a href="https://pub.dev/packages/flutter_axelor_sdk">
+    <img alt="Pub Package" src="https://img.shields.io/pub/v/flutter_axelor_sdk.svg">
+  </a>
+  <br/>
+  <a href="https://github.com/tenhobi/effective_dart">
+    <img alt="style: effective dart" src="https://img.shields.io/badge/style-effective_dart-40c4ff.svg">
+  </a>  
+  <a href="https://opensource.org/licenses/BSD-3-Clause">
+    <img alt="BSD-3 License" src="https://img.shields.io/github/license/Abdktefane/flutter-axelor-sdk">
+  </a>
+</p>
+
+
+
 # flutter_axelor_sdk
 
  Powerful, helpful, extensible and highly customizable API's that wrap http client to make communication easier with [Axelor](https://axelor.com/) server with boilerplate code free.
@@ -11,8 +33,6 @@
 
 - [Axelor APIs](#axelor-apis)
 
-- [Advanced Use](#advanced-use)
-
 - [Contributing](#contributing)
 
 ## Get Started
@@ -21,9 +41,7 @@
 
 ```yaml
 flutter_axelor_sdk:  
-    git:    
-     url: https://github.com/Abdktefane/flutter-axelor-sdk.git
-     ref: v0.0.1  # you can track the development version => ref: master
+    flutter_axelor_sdk: ^0.0.1
 ```
 #### initial in `main.dart`
 ```dart
@@ -128,12 +146,8 @@ try {
 - [ ] [MetaData Services](https://docs.axelor.com/adk/5.4/dev-guide/web-services/meta.html) ⛏️
 - [ ] [Action Service](https://docs.axelor.com/adk/5.4/dev-guide/web-services/advanced.html#action-service) ⛏️
 
-## Advanced Use
-- **Pagination**:
-- **Token Refresh**:
-- **Log Error**:
-- **Retry logic**:
 
 ## Contributing
-You can help us make this project better, feel free to open an new issue or a pull request.
+#### 👋 Want to contribute to Abdktefane/flutter_axelor_sdk?
+If you have a bug or an idea, read the [contributing guidelines](https://github.com/Abdktefane/flutter-axelor-sdk/blob/main/CONTRIBUTING.md) before opening an issue.
 
