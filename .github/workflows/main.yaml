@@ -15,10 +15,10 @@ jobs:
       - uses: dart-lang/setup-dart@v1
 
       - name: Install Dependencies
-        run: dart pub get
+        run: flutter pub get
 
       - name: Format
-        run: dart format .
+        run: flutter format .
 
       - name: Analyze
         run: dart analyze .
