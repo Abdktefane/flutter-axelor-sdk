@@ -1,7 +1,10 @@
 name: flutter_axelor_sdk
-description: A new Flutter package project.
+description: Powerful, helpfull, extensible and highly customizable API's that wrap http client to make communication easier with Axelor server with boilerplate code free.
 version: 0.0.1
-homepage:
+repository: https://github.com/Abdktefane/flutter-axelor-sdk
+issue_tracker: https://github.com/Abdktefane/flutter-axelor-sdk/issues
+homepage: https://github.com/Abdktefane/flutter-axelor-sdk
+documentation: https://github.com/Abdktefane/flutter-axelor-sdk
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
