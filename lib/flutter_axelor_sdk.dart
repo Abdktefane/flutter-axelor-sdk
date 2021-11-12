@@ -178,6 +178,22 @@ abstract class Axelor {
   /// [headers]: http headers
   /// [mapper]: Callback to transform json response into [AxelorModel]
   /// [body]: [AxelorBody] new record object
+  /// 
+  /// ```dart
+  /// Axelor.create(
+  ///   baseDomain: true,
+  ///   model: UserModel.modelName,
+  ///   mapper: UserModel.fromJson,
+  ///   body: const AxelorBody(
+  ///     fields: ['name', 'lastName'],
+  ///     data: {
+  ///       'firstName': 'John',
+  ///       'lastName': 'Smith',
+  ///       'email': 'j.smith@gmail.com',
+  ///     },
+  ///   ),
+  /// );
+  /// ```
   static Future<AxelorResult<T>> create<T extends AxelorModel>({
     required bool baseDomain,
     required String model,
