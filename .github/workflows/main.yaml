@@ -28,4 +28,4 @@ jobs:
         run: dart analyze .
 
       - name: run tests
-        run: flutter pub run test
+        run: flutter test
