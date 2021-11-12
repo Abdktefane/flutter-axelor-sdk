@@ -17,6 +17,7 @@ dependencies:
   # Data
   equatable: ^2.0.3
   dio: ^4.0.1
+  json_annotation: ^4.0.0
 
 dev_dependencies:
   flutter_test:
