@@ -15,18 +15,13 @@ jobs:
       - uses: dart-lang/setup-dart@v1
 
       - name: Install Dependencies
-        run: dart pub get
+        run: flutter pub get
 
       - name: Format
-        run: dart format .
+        run: flutter format .
 
       - name: Analyze
         run: dart analyze .
 
-      - name: Run Tests
-        run: |
-          pub global activate test_coverage
-          export PATH=$PATH:$HOME/.pub-cache/bin
-          test_coverage
-      - name: Check Code Coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v1.1.1
+      - name: run tests
+        run: flutter pub run test
