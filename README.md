@@ -1,6 +1,6 @@
 # flutter_axelor_sdk
 
- Powerful, helpfull, extensible and highly customizable API's that wrap http client to make communication easier with [Axelor](https://axelor.com/) server with boilerplate code free.
+ Powerful, helpful, extensible and highly customizable API's that wrap http client to make communication easier with [Axelor](https://axelor.com/) server with boilerplate code free.
  
 ## Table of contents
 - [Get Started](#get-started)
